@@ -12,21 +12,21 @@ const UI_TEXTS = {
     level: "Niveau:", found: "Trouvés:", timer: "Temps:",
     wordsTitle: "Mots à trouver :", prev: "⏮️ Précédent", next: "Suivant ⏭️",
     restart: "🔄 Recommencer", hint: "💡 Indice (-10s)", win: "Félicitations ! Niveau terminé !",
-    shareText: "J'ai réussi le niveau de Mots Cachés - Cabinet Celicourt et Associés !"
+    shareText: "J'ai réussi le niveau de Mots Cachés - Cabinet d'avocats Celicourt/Saint-Louis et Associés !"
   },
   en: {
     slogan: "Theme: Law & Judicial System",
     level: "Level:", found: "Found:", timer: "Time:",
     wordsTitle: "Words to find:", prev: "⏮️ Previous", next: "Next ⏭️",
     restart: "🔄 Restart", hint: "💡 Hint (-10s)", win: "Congratulations! Level completed!",
-    shareText: "I completed the Word Search level - Cabinet Celicourt et Associés!"
+    shareText: "I completed the Word Search level - Cabinet d'avocats Celicourt/Saint-Louis et Associés!"
   },
   es: {
     slogan: "Tema: Derecho y Sistema Judicial",
     level: "Nivel:", found: "Encontrados:", timer: "Tiempo:",
     wordsTitle: "Palabras a buscar:", prev: "⏮️ Anterior", next: "Siguiente ⏭️",
     restart: "🔄 Reiniciar", hint: "💡 Pista (-10s)", win: "¡Felicidades! ¡Nivel completado!",
-    shareText: "¡Completé el nivel de Sopa de Letras - Cabinet Celicourt et Associés!"
+    shareText: "¡Completé el nivel de Sopa de Letras - Cabinet d'avocats Celicourt/Saint-Louis et Associés!"
   }
 };
 
@@ -509,7 +509,7 @@ function shareScore() {
   const text = UI_TEXTS[currentLang].shareText;
   if (navigator.share) {
     navigator.share({
-      title: 'Mots Cachés - Cabinet Celicourt et Associés',
+      title: 'Mots Cachés - Cabinet Celicourt/Saint-Louis et Associés',
       text: text,
       url: window.location.href,
     }).catch(() => {});
