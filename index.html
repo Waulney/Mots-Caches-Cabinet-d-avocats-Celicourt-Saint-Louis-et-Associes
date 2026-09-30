@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mots Cachés - Cabinet Celicourt et Associés</title>
+  
+  <!-- Favicon / Logo -->
+  <link rel="icon" type="image/png" href="logo.png">
+  
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. ÉCRAN D'ACCUEIL / ANIMATION D'ENTRÉE (SPLASH SCREEN) -->
+  <div id="splashScreen" class="splash-screen">
+    <img src="logo.png" alt="Logo Cabinet Celicourt et Associés" class="splash-logo" onerror="this.style.display='none'">
+    <h1 id="typewriterText" class="typewriter-title">Mots Cachés</h1>
+    <p class="splash-subtitle">Cabinet Celicourt et Associés</p>
+  </div>
+
+  <!-- 2. EN-TÊTE DU JEU (HEADER) -->
+  <header class="game-header">
+    <div class="header-top">
+      <div class="app-brand">
+        <h1>
+          <img src="logo.png" alt="Logo" class="header-logo" onerror="this.style.display='none'">
+          Mots Cachés - Cabinet Celicourt et Associés
+        </h1>
+        <p class="app-slogan" id="appSlogan">Thème : Droit & Système Judiciaire</p>
+      </div>
+
+      <!-- Contrôles du menu et langues -->
+      <div class="header-controls">
+        <select id="langSelect" aria-label="Langue">
+          <option value="fr" selected>🇫🇷 Français</option>
+          <option value="en">🇬🇧 English</option>
+          <option value="es">🇪🇸 Español</option>
+        </select>
+
+        <button id="muteBtn" class="btn-control" title="Activer/Désactiver le son">🔊 Mute</button>
+        <button id="nightModeBtn" class="btn-control" title="Mode Nuit">🌙 Nuit</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. BARRE DE PROGRESSION & NIVEAUX -->
+  <section class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-label" id="levelLabel">Niveau:</span>
+      <span id="levelDisplay" class="stat-value">1 / 20</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label" id="foundLabel">Trouvés:</span>
+      <span id="foundDisplay" class="stat-value">0 / 6</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label" id="timerLabel">Temps:</span>
+      <span id="timerDisplay" class="stat-value">00:00</span>
+    </div>
+  </section>
+
+  <!-- 4. CONTENEUR PRINCIPAL DU JEU -->
+  <main class="main-game-container">
+    
+    <!-- Titre du niveau courant -->
+    <div class="level-title-card">
+      <h2 id="levelTitle">Niveau 1 : Acteurs du Droit</h2>
+    </div>
+
+    <!-- Grille interactive des mots cachés -->
+    <div class="grid-wrapper">
+      <div id="wordGrid" class="word-grid" role="grid" aria-label="Grille de mots cachés">
+        <!-- Généré dynamiquement par JavaScript -->
+      </div>
+    </div>
+
+    <!-- Liste des mots à chercher -->
+    <div class="word-list-card">
+      <h3 id="wordsToFindTitle">Mots à trouver :</h3>
+      <div id="wordList" class="word-list">
+        <!-- Les mots du niveau s'afficheront ici -->
+      </div>
+    </div>
+
+    <!-- Actions et Aides -->
+    <div class="actions-bar">
+      <button id="prevLevelBtn" class="btn-action">⏮️ Précédent</button>
+      <button id="hintBtn" class="btn-action btn-accent">💡 Indice (-10s)</button>
+      <button id="restartLevelBtn" class="btn-action">🔄 Recommencer</button>
+      <button id="nextLevelBtn" class="btn-action">Suivant ⏭️</button>
+    </div>
+
+  </main>
+
+  <!-- 5. PANNEAU DE PERSONNALISATION (OPTIONAL RGB & OPACITÉ) -->
+  <section class="custom-panel">
+    <div class="custom-title">Personnalisation du fond</div>
+    <div class="sliders-grid">
+      <div class="slider-group">
+        <label for="bgRed">R:</label>
+        <input type="range" id="bgRed" min="0" max="255" value="244">
+      </div>
+      <div class="slider-group">
+        <label for="bgGreen">G:</label>
+        <input type="range" id="bgGreen" min="0" max="255" value="246">
+      </div>
+      <div class="slider-group">
+        <label for="bgBlue">B:</label>
+        <input type="range" id="bgBlue" min="0" max="255" value="249">
+      </div>
+      <div class="slider-group">
+        <label for="boxOpacity">Opacité:</label>
+        <input type="range" id="boxOpacity" min="0.3" max="1" step="0.05" value="0.95">
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. PIED DE PAGE & SUPPORT -->
+  <footer class="game-footer">
+    <div class="footer-info">
+      <span>Dédié au Cabinet Celicourt et Associés © 2026</span>
+    </div>
+    <div class="footer-support">
+      <span>AyitiZ Games Suite</span>
+    </div>
+    <button id="shareBtn" class="btn-share">🔗 Partager</button>
+  </footer>
+
+  <!-- Inclusion du script principal -->
+  <script src="script.js"></script>
+</body>
+</html>
