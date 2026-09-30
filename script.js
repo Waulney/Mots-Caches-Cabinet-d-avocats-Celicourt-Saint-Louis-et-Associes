@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MOTS CACHÉS - CABINET CELICOURT ET ASSOCIÉS
+   MOTS CACHÉS - CABINET d'avocats CELICOURT/SAINT-LOUIS ET ASSOCIÉS
    SCRIPT PRINCIPAL (LOGIQUE DE JEU COMPLÈTE - 20 NIVEAUX)
    ========================================================================== */
 
